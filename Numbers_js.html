@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers</title>
+  </head>
+  <body>
+    <h2>Learning Numbers</h2>
+    <p id="demo"></p>
+
+    <script>
+      //1 JavaScript has only one type of number. Numbers can be written with or without decimals.
+
+      let a = 2.2; // With Decimal
+
+      let b = 5; // Without Decimal
+
+      let c = 0888; // Decimals with leading zeros are not allowed.
+
+      document.write(`1 . ${a}<br><br>`);
+      document.write(`1 . ${b}<br><br>`);
+      document.write(`1 . ${c}<br><br>`);
+
+      // 2 Extra large or extra small numbers can be written with scientific (exponent) notation:
+
+      let num1 = 12e5; //  The notation e5 means "multiplied by 10 to the power of 5."
+
+      let num2 = 12e-5; // . Similarly, 12e-5 is equivalent to 12 multiplied by 10 to the power of -5, or 0.0012
+
+      document.write(`2 . ${num1}<br><br>`);
+      document.write(`2 . ${num2}<br><br>`);
+
+      // 3 Integer Precision
+      // Integers (numbers without a period or exponent notation) are accurate up to 15 digits.
+
+      let intPrecNum1 = 99999999999999;
+      let intPrecNum2 = 9999999999999999;
+
+      document.write(`3 . ${intPrecNum1}<br><br>`);
+      document.write(`3 . ${intPrecNum2}<br><br>`);
+
+      // 4 if you add two numbers the result will be number
+
+      let x = 10;
+      let y = 12;
+
+      document.write(`4 . ${x + y}<br><br>`);
+
+      // 5 If you add a number and a string, the result will be a string concatenation:
+
+      let a1 = "10";
+      let b1 = 8;
+
+      document.write(`5 . ${a1 + b1}<br><br>`);
+
+      //  6 Not a Number (NaN)
+      // Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):
+
+      let x1 = 5;
+      let y1 = "Heyy";
+
+      document.write(`6 . ${x1 * y1}<br><br>`);
+
+      // 7 A number divided by a numeric string becomes a number (You can multiply and subtract also)
+
+      let nm1 = 10;
+
+      let nm2 = "5";
+
+      document.write(`7 ${nm1 / nm2}<br><br>`);
+
+      // 8 Division by zero generates Infinity;
+
+      let nm3 = 20;
+      let nm4 = 0;
+
+      document.write(`8 ${nm3 / nm4}<br><br>`);
+
+      // 9 numbers can also be defined as objects with the keyword new:
+
+      let newNum = 12;
+
+      let objNum = new Number(89);
+      document.write(`9 ${typeof newNum}<br><br>`);
+      document.write(`9 ${typeof objNum}<br><br>`);
+    </script>
+  </body>
+</html>

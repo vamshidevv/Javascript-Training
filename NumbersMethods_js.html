@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers Methods</title>
+  </head>
+  <body>
+    <h2>Learning Numbers Methods</h2>
+
+    <script>
+      // 1 toString() Method
+      // The toString() method returns a number as a string.
+
+      let strNum1 = 15;
+
+      let strNum2 = 15;
+
+      let strNum3 = strNum1 + strNum2;
+      let strNum4 = strNum3.toString();
+
+      document.write(`1 . ${strNum3} <br><br>`);
+      document.write(`1 . ${typeof strNum4}<br><br>`);
+
+      // 2 toExponential() Method
+      // The toExponential() returns a string, with a number rounded and written using exponential notation. toFixed(2) is perfect for working with money.
+
+      let expoNum = 5.152;
+
+      document.write(`2 . ${expoNum.toExponential()}<br><br>`);
+      document.write(`2 . ${expoNum.toExponential(2)}<br><br>`);
+      document.write(`2 . ${expoNum.toExponential(3)}<br><br>`);
+      document.write(`2 . ${expoNum.toExponential(6)}<br><br>`);
+
+      // 3 toFixed() Method
+      // toFixed() returns a string, with the number written with a specified number of decimals:
+
+      let toFxDec = 2.2356;
+
+      document.write(`3 . ${expoNum.toFixed(0)}<br><br>`);
+      document.write(`3 . ${expoNum.toFixed(2)}<br><br>`);
+      document.write(`3 . ${expoNum.toFixed(3)}<br><br>`);
+      document.write(`3 . ${expoNum.toFixed(6)}<br><br>`);
+
+      // 4 toPrecision() Method
+      // toPrecision() returns a string, with a number written with a specified length:4
+      let toPrecNum = 6.52253;
+      document.write(`4 . ${toPrecNum.toPrecision()}<br><br>`);
+      document.write(`4 . ${toPrecNum.toPrecision(3)}<br><br>`);
+      document.write(`4 . ${toPrecNum.toPrecision(5)}<br><br>`);
+
+      // 5  valueOf() Method
+      // valueOf() returns a number as a number.
+
+      let valNum1 = 11;
+      let valNum2 = "Heyy";
+      let valDate = new Date();
+
+      document.write(`5 . ${valNum1.valueOf()}<br><br>`);
+      document.write(`5 . ${valNum2.valueOf()}<br><br>`);
+      document.write(`5 . ${valDate.valueOf()}<br><br>`); // it converts the date into milliseconds
+
+      // 6 Number() Method
+
+      let numMeth1 = true;
+      let numMeth2 = false;
+      let numMeth3 = "10 ";
+      let numMeth4 = "HEllo";
+      let numMeth5 = Number(numMeth3);
+
+      document.write(`6 . ${Number(numMeth1)}<br><br>`);
+      document.write(`6 . ${Number(numMeth2)}<br><br>`);
+      document.write(`6 . ${Number(numMeth3)}<br><br>`);
+      document.write(`6 . ${Number(numMeth4)}<br><br>`);
+      document.write(`6 . ${typeof numMeth5}<br><br>`);
+
+      // 7 parseInt() Method
+      // parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
+
+      let parsNum1 = "10 1"; //
+      let parsNum2 = parseInt(parsNum1);
+
+      document.write(`7 . ${parsNum2}<br><br>`);
+      document.write(`7 . ${typeof parsNum2}<br><br>`);
+
+      // 8 parseFloat()  Method
+
+      let parsFltNum1 = "33.3";
+
+      let parFltConvert1 = parseFloat(parsFltNum1);
+
+      let parsFltNum2 = "9  12 13";
+      let parFltConvert2 = parseFloat(parsFltNum2);
+
+      document.write(`8 . ${parFltConvert1}<br><br>`);
+      document.write(`8 . ${typeof parFltConvert1}<br><br>`);
+      document.write(`8 . ${parFltConvert2}<br><br>`); // it prints only the starting num
+
+      // 9 Number.isInteger() Method
+      // The Number.isInteger() method returns true if the argument is an integer.
+
+      let num1IsInt = 10;
+      let num2IsInt = "10";
+
+      document.write(`9 . ${Number.isInteger(num1IsInt)}<br><br>`);
+      document.write(`9 . ${Number.isInteger(num2IsInt)}<br><br>`);
+
+      // 10 Number.isSafeInteger() Method
+      // The Number.isSafeInteger() method returns true if the argument is a safe integer.
+
+      let num1IsSafeInt = 12;
+      let num2IsSafeInt = 12222222222222222; // if suppose we use isInteger it returns true cause its only see it is inetegr or not it not check the max length should be up to 15
+
+      document.write(`10 . ${Number.isSafeInteger(num1IsSafeInt)}<br><br>`);
+      document.write(`10 . ${Number.isSafeInteger(num2IsSafeInt)}<br><br>`);
+    </script>
+  </body>
+</html>

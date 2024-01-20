@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <h2>Learning Arrays</h2>
+
+    <script>
+      // 1 array
+
+      let arr = [23, 2, 10, 23, 16, 8];
+      document.write(`1. ${arr}<br><br>`);
+
+      // 2 you can also create using the java script keyword new
+
+      let arr2 = new Array(6, 3, 8, 4, 9, 6);
+      document.write(`2. ${arr2}<br><br>`);
+
+      // 3 accesing array element
+
+      let arr3 = [8, 9, 5, 6, 32, 4, 6];
+
+      document.write(`3. ${arr3[2]}<br><br>`);
+
+      // 4 changing an array element
+
+      let vehicles = ["car", "cycle", "bus"];
+
+      vehicles[1] = "bike";
+
+      document.write(`4. ${vehicles}<br><br>`);
+      document.write(`4. ${typeof vehicles}<br><br>`);
+
+      // 5 The length Property
+
+      let arr4 = [1, 2, 3, 6, 5, 4];
+      document.write(`5. length is : ${arr4.length}<br><br>`);
+
+      // 6 print array un unorder list
+
+      let arrFruits = ["banana", "apple", "mango"];
+      let ul = "<ul>";
+      for (let i = 0; i < arrFruits.length; i++) {
+        ul += "<li>" + arrFruits[i] + "</li>";
+      }
+      ul += "</ul>";
+      document.write(`6. ${ul}<br><br>`);
+
+      // 7 Avoid using new Array()
+
+      let usingNewArr1 = new Array(1, 4, 5, 6, 3);
+      let usingNewArr2 = new Array(20); // its not give appropriate output
+      let usingNewArr3 = [20]; // istead of new Array you can use [] cause it give an output that you want
+
+      document.write(`7. ${usingNewArr1}<br><br>`);
+      document.write(`7. ${usingNewArr2}<br><br>`);
+      document.write(`7. ${usingNewArr3}<br><br>`);
+    </script>
+  </body>
+</html>

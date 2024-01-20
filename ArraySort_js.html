@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Sort</title>
+  </head>
+  <body>
+    <h2>Learning Array Sort Method</h2>
+
+    <script>
+      // 1 sort() Method
+      // The sort() method sorts an array alphabetically:
+
+      let carNames = ["creta", "alto", "baleno", "datsun"];
+
+      document.write(`1 . old arr : ${carNames}<br><br>`);
+
+      document.write(`1 . new arr : ${carNames.sort()}<br><br>`);
+
+      // 2 . reverse() Method
+      // The reverse() method reverses the elements in an array:
+
+      let vehicles = ["bus", "bike", "car"];
+
+      document.write(`2 .  ${vehicles.reverse()}<br><br>`);
+
+      // 3 toSorted() Method
+      //   The difference between toSorted() and sort() is that the first method creates a new array,
+      //   keeping the original array unchanged, while the last method alters the original array.
+
+      let fruits = ["banana", "orange", "mango", "apple"];
+
+      document.write(`3 . old arr : ${fruits}<br><br>`);
+
+      document.write(`3 . new arr : ${fruits.toSorted()}<br><br>`);
+
+      // 4 toReversed() Method
+      // The difference between toReversed() and reverse() is that the first method creates a new array,
+      // keeping the original array unchanged, while the last method alters the original array.
+
+      let arrToReverse = [5, 3, 6, 4, 8, 6];
+      document.write(`4 . old arr : ${arrToReverse}<br><br>`);
+      document.write(`4 . reversed : ${arrToReverse.toReversed()}<br><br>`);
+
+      // 5 Numeric sort Method
+      // By default, the sort() function sorts values as strings.
+      // sorting using compare function
+
+      let numSorting = [2, 5, 10, 11, 1, 6, 20];
+      let numSorting2 = [2, 10, -10, 2, 5, 20, 1, -5];
+
+      document.write(`5 . ${numSorting.sort()}<br><br>`); // it is not the correct way to sorting numberic values instead of sort you can use compare funC
+      document.write(
+        `5 . Ascending : ${numSorting.sort((a, b) => a - b)}<br><br>`
+      ); // its sort Ascending
+      document.write(
+        `5 . Descending : ${numSorting.sort((a, b) => b - a)}<br><br>`
+      ); // its sort descending
+      document.write(`5 . ${numSorting2.sort((a, b) => a - b)}<br><br>`); // but the compare funC cannot proper work with nagative values
+
+      // 6 Find The Latest Value
+
+      let findLowestVal = [2, 6, 1, 20, 10, 6, 8];
+      findLowestVal.sort((a, b) => a - b);
+
+      document.write(`6 . lowest value is : ${findLowestVal[0]}<br><br>`);
+
+      // 7 Find The Highest Value
+
+      let findHighestVal = [1, 2, 10, 20, 6, 22, 5];
+      findHighestVal.sort((a, b) => b - a);
+      document.write(`7 . highest value is : ${findHighestVal[0]}<br><br>`);
+
+      // 8 min()
+    </script>
+  </body>
+</html>

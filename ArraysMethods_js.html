@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Methods</title>
+  </head>
+  <body>
+    <h2>Learning Array Methods</h2>
+
+    <script>
+      //1 length Method
+
+      let arr = [5, 3, 6, 2, 5, 3];
+
+      document.write(`1 . Length Is : ${arr.length}<br><br>`);
+
+      //2 toString() Method
+
+      let arr2 = [6, 3, 5, 9, 6];
+
+      let arrToStr = arr.toString();
+
+      document.write(`2 .${arrToStr}<br><br>`);
+      document.write(`2 .${typeof arrToStr}<br><br>`);
+
+      // 3 at() Method
+      // The at() method returns an indexed element from an array. The at() method returns the same as [].
+
+      let vehicles = ["car", "bus", "bike"];
+
+      document.write(`3 . ${vehicles.at(1)}<br><br>`);
+
+      // 4 join() Methods
+      // The join() method also joins all array elements into a string.
+
+      let friuts = ["banana", "apple", "mango"];
+      let conFruits = friuts.join(" * ");
+
+      document.write(`4 . ${typeof friuts}<br><br>`);
+      document.write(`4 . ${conFruits}<br><br>`);
+      document.write(`4 . ${typeof conFruits}<br><br>`);
+
+      // 5 pop() Method
+      // The pop() method removes the last element from an array:
+
+      let numArr = [5, 2, 6, 3, 2];
+
+      document.write(`5 . old arr : ${numArr}<br><br>`);
+      document.write(`5 . poped Elem : ${numArr.pop()}<br><br>`);
+      document.write(`5 . new arr :  ${numArr}<br><br>`);
+
+      //  6 push() Method
+      // The push() method adds a new element to an array (at the end
+
+      let strArr = ["Hello", "hey", "good morning"];
+
+      document.write(`6 . old arr : ${strArr}<br><br>`);
+
+      document.write(`6 . new arr :  ${strArr}<br><br>`);
+
+      // 7 shift() Method
+      //   The shift() method removes the first array element and "shifts" all other elements to a lower index.
+
+      let shiftArr = [9, 6, 3, 5, 4, 8];
+
+      document.write(`7 . old arr : ${shiftArr}<br><br>`);
+      document.write(`7 . shifted Elem : ${shiftArr.shift()}<br><br>`);
+      document.write(`7 . new arr :  ${shiftArr}<br><br>`);
+
+      // 8 unshift Method
+
+      let unShiftArr = ["apple", "banana", "mango"];
+      let unShiftArrCon = unShiftArr.unshift("kiwi");
+
+      document.write(`8 . new arr :  ${unShiftArr}<br><br>`);
+
+      // 9 concat() Method
+
+      let conCat1 = ["vamshi", "pavan", "shivam"];
+
+      let conCat2 = ["maya", "krishna"];
+
+      let concatFinal = conCat1.concat(conCat2);
+
+      document.write(`9 .  ${concatFinal}<br><br>`);
+
+      // 10 copyWithin() Method
+
+      let carsName = ["creta", "skoda", "kia", "volvo"];
+
+      document.write(`10 .  ${carsName.copyWithin(2)}<br><br>`);
+      document.write(`10 .  ${carsName.copyWithin(0, 1)}<br><br>`);
+
+      // 11 flat Method()
+
+      let arrFlat = [
+        [1, 2, [3, 4]],
+        [5, 6],
+      ];
+
+      document.write(`11 .  ${arrFlat.flat()}<br><br>`);
+      //   console.log(arrFlat);
+      //   console.log(arrFlat.flat(Infinity));
+
+      // 12 splice() Method
+
+      // The splice() method can be used to add new items to an array:
+      const vehicles2 = ["cars", "bus", "cycle"];
+      vehicles2.splice(2, 0, "bike");
+      document.write(`12 . ${vehicles2}<br><br>`);
+
+      //  you can use splice() to remove elements without leaving "holes" in the array:
+
+      const carNames = ["alto", "skoda", "creta", "kia"];
+      const carNamesRmv = carNames.splice(0, 1);
+      document.write(`12 . removed elem : ${carNamesRmv}<br><br>`);
+      document.write(`12 . ${carNames}<br>,<br>`);
+
+
+      // toSplice() Method
+
+      
+
+      // slice() Method
+      //   The slice() method slices out a piece of an array into a new array:
+
+      let arrSlice = [3, 6, 4, 8, 9, 5];
+
+      let newSlice = arrSlice.slice(1);
+      let newSlice2 = arrSlice.slice(1, 3);
+
+      document.write(`13 . ${newSlice}<br>,<br>`);
+      document.write(`13 . ${newSlice2}<br>,<br>`);
+    </script>
+  </body>
+</html>
