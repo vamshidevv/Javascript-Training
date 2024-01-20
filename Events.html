@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <style>
+    .container {
+      /* background-color: aqua; */
+      border: 1px solid black;
+      height: 20rem;
+      width: 20rem;
+      transition: 0.3s all;
+    }
+  </style>
+  <body>
+    <h2>Learning Events</h2>
+    <h3>Click Here</h3>
+    <button onclick="clk()">Click Me To Know Date</button>
+    <p class="print"></p>
+    <button onclick="clk2()">Click Me To Know Time</button>
+    <p class="print2"></p>
+
+    <div class="container"></div>
+    <button onclick="chngBg()">Clikc To see diffrent box</button><br /><br />
+    <button onclick="greet()">Greet</button><br /><br />
+    <input type="text" id="txt" placeholder="Search" autofocus />
+    <button type="reset" onclick="reset()">Reset</button>
+
+    <script>
+      let clk = () => {
+        document.querySelector(".print").innerHTML = new Date().toDateString();
+      };
+      let clk2 = () => {
+        document.querySelector(".print2").innerHTML = new Date().toTimeString();
+      };
+
+      let chngBg = () => {
+        let cont = document.querySelector(".container");
+        cont.style.backgroundColor = "seagreen";
+        cont.style.border = "1px solid black";
+        cont.style.borderRadius = "10px";
+        cont.style.boxShadow = "1px 1px 3px black";
+      };
+
+      let greet = () => {
+        alert("Hii There! Good Evening");
+      };
+
+      let reset = () => {
+        let rst = (document.getElementById("txt").value = " ");
+      };
+    </script>
+  </body>
+</html>

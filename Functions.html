@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+  </head>
+  <body>
+    <h2>Learning Functions in js</h2>
+
+    <script>
+      //// Function definition
+      function test() {
+        return document.write("Hello World");
+      }
+      // Function invocation (calling the function)
+      test();
+      document.write("<br><br>");
+
+      // Function definition with a default parameter
+
+      function demo(username = "Vamshi") {
+        return "=> " + username;
+      }
+      document.write(demo());
+      document.write("<br><br>");
+
+      // 1. Write a function that returns the square of a number
+
+      function squareNum(num) {
+        return num * num;
+      }
+      document.write(squareNum(2));
+      document.write("<br><br>");
+      // 2. Write a function to convert Celsius to Fahrenheit
+
+      function celciusToFharenheit(cel) {
+        return (9 / 5) * cel + 35;
+      }
+      document.write("cels to farhen = " + celciusToFharenheit(2));
+      document.write("<br><br>");
+      document.write("cels to farhen = " + celciusToFharenheit(16));
+      document.write("<br><br>");
+
+      //4. Write a function to find the area of a given Rectangle
+
+      function findAreaofRect(length, width) {
+        return "The area of rectangle is =" + length * width; // formula  = length × width
+      }
+      document.write(findAreaofRect(10, 20));
+      document.write("<br><br>");
+
+      document.write(findAreaofRect(13, 11));
+      document.write("<br><br>");
+
+      // Create a function inside another function
+
+      function calc(para) {
+        let count = 11;
+        function num(para, count) {
+          return para + count;
+        }
+        return num(para, count);
+      }
+
+      document.write(calc(22));
+      document.write("<br><br>");
+      document.write(calc(10));
+      document.write("<br><br>");
+
+      //  print table by taking user input
+      let tb = prompt("Enter Num");
+      for (let i = 1; i <= 10; i++) {
+        document.write(`${tb} * ${i} = ${i * tb}`);
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>

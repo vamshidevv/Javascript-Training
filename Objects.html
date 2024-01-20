@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <h2>Learning Objects</h2>
+
+    <script>
+      let person = { name: "vamshi", lasname: "bandari", age: 23 };
+      document.write(person.name + " " + "is a " + person.age + " old");
+
+      document.write("<br><br>");
+
+      let biodata = {
+        fname: "vamshi",
+        lname: "bandari",
+        fullname: function () {
+          return this.fname + "  " + this.lname;
+        },
+      };
+      document.write(biodata.fullname());
+      document.write("<br><br>");
+
+      //   Write a JavaScript program to list the properties of a JavaScript object.
+
+      let student = {
+        name: "sujay",
+        class: 12,
+        rollno: 11,
+      };
+      document.write("name :" + student.name);
+      document.write("<br>");
+
+      document.write("class :" + student.class);
+      document.write("<br>");
+
+      document.write("rollno :" + student.rollno);
+      document.write("<br><br>");
+
+      // Objects property names 1.itemName ,2.price ,3.discount,4.itemCode
+
+      let ecomObj = {
+        itemName: "AirPods",
+        price: 34499 + "₹",
+        Discount: 15 + "% off",
+        itemCode: "PROD-2f5a1b8c",
+      };
+
+      document.write("itemName : " + ecomObj.itemName);
+      document.write("<br>");
+
+      document.write("price : " + ecomObj.price);
+      document.write("<br>");
+
+      document.write("Discount : " + ecomObj.Discount);
+
+      document.write("<br><br>");
+
+      function objFunc() {
+        let userInput = {
+          name: prompt("Enter Name"),
+          email: prompt("Enter Email"),
+        };
+        return userInput;
+      }
+      let store = objFunc();
+      document.write(store.name);
+      document.write("<br>");
+      document.write(store.email);
+    </script>
+  </body>
+</html>
