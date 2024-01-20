@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Types</title>
+  </head>
+  <body>
+    <h2>Learning Data Types</h2>
+
+    <script>
+      let a; //  now a is undefined
+      a = 10; // now a is number
+      a = "Vamshi"; // now a is string
+
+      document.write("=> " + a);
+      document.write("<br><br>");
+
+      // Java Script string
+
+      let str = "Hii"; // using double qoutes
+      let str2 = "Hello"; // using double qoutes
+
+      document.write(str);
+      document.write("<br><br>");
+
+      document.write(str2);
+      document.write("<br><br>");
+
+      // Java script numbers are stored in decimal value(Floating)
+
+      let flt1 = 10.0;
+      let flt2 = 10;
+
+      document.write(flt1);
+      document.write("<br><br>");
+
+      document.write(flt2);
+      document.write("<br><br>");
+
+      // Exponential Notation (Extra large or extra small numbers can be written with scientific (exponential) notation:)
+
+      let expon1 = 123e5;
+      let expon2 = 123e-5;
+
+      document.write(expon1);
+      document.write("<br><br>");
+
+      document.write(expon2);
+      document.write("<br><br>");
+
+      // JavaScript BigiNT (JavaScript BigInt is a new datatype (ES2020) that can be used to store integer values that are too big to be represented by a normal JavaScript Number.)
+
+      let bgint = BigInt(1651651651651246895798123579123);
+
+      document.write(bgint);
+      document.write("<br><br>");
+
+      // Java Script Booleans
+
+      let x = 5;
+      let y = 5;
+      let z = 10;
+
+      document.write(x == y);
+      document.write("<br><br>");
+      document.write(x == z);
+      document.write("<br><br>");
+
+      // Java Script Arrays
+
+      let arr = [2, 35, 6, 4];
+
+      document.write(arr);
+      document.write("<br><br>");
+
+      // Java Script Objects
+
+      let obj = { name: "Vamshi", lastname: " bandari", age: 23 };
+
+      document.write(
+        "My Name is " + obj.name + obj.lastname + "and my age is " + obj.age
+      );
+      document.write("<br><br>");
+
+      // Java Script typeOf operator
+
+      document.write(typeof 23);
+      document.write("<br><br>");
+
+      document.write(typeof 23.23);
+      document.write("<br><br>");
+
+      document.write(typeof (1 + 1));
+      document.write("<br><br>");
+      document.write(typeof "Hello");
+      document.write("<br><br>");
+      document.write(typeof true);
+      document.write("<br><br>");
+
+      let num;
+
+      document.write(typeof num);
+      document.write("<br><br>");
+
+    </script>
+  </body>
+</html>

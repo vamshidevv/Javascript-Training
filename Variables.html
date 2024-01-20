@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+  </head>
+  <body>
+    <h2>Learning js Variables</h2>
+
+    <script>
+      // Java script variables can be declared in 4 ways.
+
+      //1.Automatically
+
+      a = 10;
+      b = 20;
+      c = a + b;
+
+      document.write("a + b = " + c);
+      document.write("<br>");
+
+      // using var (Global Scope)
+
+      var e = 5;
+      var f = 2;
+      var g = e * f;
+      document.write("e * f = " + g);
+      document.write("<br>");
+
+      // using let  (Block Scope)
+
+      let h = 10;
+      let i = 5;
+      let j = h / i;
+
+      document.write("h / i = " + j);
+      document.write("<br>");
+
+      // using const (Block Scope)
+
+      let k = 8;
+
+      let l = 2;
+
+      let m = k % 2;
+
+      document.write("k % l = " + m);
+      document.write("<br>");
+
+      // Mixed Example
+
+      var o = 30;
+      const p = 10;
+      let q = o - p;
+
+      document.write("o - p = " + q);
+      document.write("<br>");
+
+      // variable name using $ (Since java script treats dollar sign  as a letter , identifier  containing $ are valid variable name)
+
+      let $ = 10;
+
+      let $$ = 20;
+
+      let $$$ = $ + $$;
+
+      document.write("$ + $$ = " + $$$);
+      document.write("<br>");
+
+      // varoable name using _ (Since Java Script Treats UnderScore as a letter , identifiers containing _ are valid variable names )
+
+      let _ = 20;
+
+      let __ = 20;
+
+      let ___ = _ * __;
+
+      document.write("_ * __ = " + ___);
+      document.write("<br>");
+
+      //  ⬇ diff between var let const ⬇
+
+      var ab = 16;
+      var ab = "Vamshi"; // if we use the var we can redeclare and reassign the value and variable
+
+      document.write("=> " + ab);
+      document.write("<br>");
+
+      let bb = 22;
+      let bb = "Hello"; //  if we use the let we cannot redeclare a variable but we can reassign the value . (it throws syntax error)
+      console.log(bb);
+      document.write("= > " + bb);
+
+      const cc = 55;
+      const cc = "Hii";
+      console.log(cc); // if we use const we cannot redeclare a variable and not able to reassing the value.(it throws syntax error )
+      document.write("= > " + cc);
+    </script>
+  </body>
+</html>
