@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Methods</title>
+  </head>
+  <body>
+    <h2>Learning String Methods</h2>
+
+    <script>
+      // 1. To Find String Length Using String Length Method
+
+      let str = "This Is The The String Length";
+
+      document.write("1. " + str.length + "<br><br>");
+
+      // 2. String CharAt() Method
+
+      let strChar = "Heyy";
+
+      document.write("2." + strChar.charAt(0) + "<br><br>"); // The charAt() method returns the character at a specified index (position) in a string:
+      // console.log(strChar.charAt(23)) // it retuns empty string
+
+      // 3. charCodeAt() Method
+
+      let codeAT = "Good Evening";
+
+      document.write("3. " + codeAT.charCodeAt(0) + "<br><br>"); // The charCodeAt() method returns the code of the character at a specified index in a string:
+
+      // 4 at() Method
+
+      let strAt = "Koli Infotech";
+
+      document.write("4. " + strAt.at(1) + "<br><br>"); // The at() method returns the character at a specified index (position) in a string. and it support all modern browsers
+
+      // 5 Property Access [] Method
+
+      let strProp = "Access The Property";
+
+      document.write("5. " + strProp[1] + "<br><br>");
+      // console.log(strProp[25]) // it returns undefined
+
+      // 6 slice() Method
+
+      let strSlice = "apple,banana,mango"; // extracts a part of a string and returns the extracted part in a new string.
+      document.write("6. " + strSlice.slice(0, 7) + "<br><br>"); // The method takes 2 parameters: start position, and end position (end not included).
+
+      let strSlice2 = "Heyy , GoodMorning , Greet";
+      document.write("6. " + strSlice2.slice(7) + "<br><br>"); // If you omit the second parameter, the method will slice out the rest of the stri
+
+      let strSlice3 = "banana, mango,apple";
+
+      document.write("6. " + strSlice3.slice(-6) + "<br><br>"); // If a parameter is negative, the position is counted from the end of the string:
+
+      // 7 substring() Method is similar to slice()
+      //The difference is that start and end values less than 0 are treated as 0 in substring().
+
+      let subStr = "mango ,apple , kiwi";
+
+      document.write("7. " + subStr.substring(7, 19) + "<br><br>");
+
+      // 8 substr() method is simiar slice
+      //   The difference is that the second parameter specifies the length of the extracted part.
+
+      let strSub = "Kiwi, Mango , Apple ";
+
+      document.write("8. " + strSub.substr(0, 4) + "<br><br>");
+
+      // 9. toUpperCase() Method
+      //A string is converted to upper case with toUpperCase():
+
+      let strUpper = "hii there good morning";
+      document.write("9. " + strUpper.toLocaleUpperCase() + "<br><br>");
+
+      // 10 toLowerCase() Method
+      //   A string is converted to lower case with toLowerCase():
+
+      let strLower = "HELLO TEAM MEMBERS";
+      document.write("10. " + strLower.toLocaleLowerCase() + "<br><br>");
+
+      // 11 concat() method
+      //concat() joins two or more strings:
+
+      let strConc1 = "Koli";
+      let strConc2 = "Infotech";
+
+      document.write("11. " + strConc1.concat(" " + strConc2) + "<br><br>");
+
+      // 12 trim() Method
+      // The trim() method removes whitespace from both sides of a string:
+
+      let strTrim = "    Koli Infotech    ";
+
+      document.write("12. " + strTrim.length + "<br><br>");
+      document.write("12. " + strTrim.trim().length + "<br><br>");
+
+      // 13 trimStart() Method
+      // The trimStart() method works like trim(), but removes whitespace only from the start of a string.
+
+      let strTrimStrt = "   HEllo World    ";
+      document.write("13. " + strTrimStrt.length + "<br><br>");
+      document.write("13. " + strTrimStrt.trimStart().length + "<br><br>");
+
+      // 14 trimEnd() Method
+      // The trimStart() method works like trim(), but removes whitespace only from the end of a string.
+
+      let strTrimEnd = "       Hii There   ";
+      document.write("14. " + strTrimEnd.length + "<br><br>");
+      document.write("14. " + strTrimEnd.trimStart().length + "<br><br>");
+
+      // 15 padStart() method
+      // The padStart() method pads a string from the start. It pads a string with another string (multiple times) until it reaches a given length.
+
+      let strPadStart = "1";
+
+      document.write("15. " + strPadStart.padStart(4, "w") + "<br><br>");
+
+      // 16 padEnd
+      // The padStart() method pads a string from the end. It pads a string with another string (multiple times) until it reaches a given length.
+
+      let strPadEnd = "5";
+
+      document.write("16. " + strPadEnd.padEnd(4, "w") + "<br><br>");
+
+      // 17 repeat() Method
+      // The repeat() method returns a string with a number of copies of a string.
+      // The repeat() method does not change the original string.
+
+      let strRepeat = " koli Infotech";
+      document.write("17. " + strRepeat.repeat(2) + "<br><br>");
+      document.write("17. " + strRepeat.repeat(5) + "<br><br>");
+
+      // 18 replace Method
+      // The replace() method replaces a specified value with another value in a string:
+
+      let strReplace = "Please Visit Microsoft";
+
+      document.write(
+        "18. " + strReplace.replace("Microsoft", "Koli Infotech") + "<br><br>"
+      );
+      // 19 replaceAll()
+      // The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.
+
+      let strReplaceAl = "Please Visit Microsoft and Microsoft";
+      document.write(
+        "19. " +
+          strReplaceAl.replaceAll("Microsoft", "Koli Infotech") +
+          "<br><br>"
+      );
+
+      // 20 Slipt() Method
+
+      //A string can be converted to an array with the split() method:
+
+      let strSplit = "1,2,3,4,5,6,7";
+      let newStrSplit = strSplit.split(",");
+      document.write("20. " + newStrSplit[1] + "<br><br>");
+    </script>
+  </body>
+</html>

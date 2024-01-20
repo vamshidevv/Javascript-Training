@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Search Methods</title>
+  </head>
+  <body>
+    <h2>Learning String Search Methods</h2>
+    <script>
+      // 1 indexOf() Search Methods
+      // The indexOf() method returns the index (position) of the first occurrence of a string in a string, or it returns -1 if the string is not found:
+
+      let strIndxOf = "Heyy Find The IndexOf This String";
+
+      document.write("1. " + strIndxOf.indexOf("The") + "<br><br>");
+      document.write("1. " + strIndxOf.indexOf("The", 5) + "<br><br>"); // it accept second parameter as the starting position for the search
+      document.write("1. " + strIndxOf.indexOf("HEllo") + "<br><br>"); // return  -1 if the text is not found
+
+      // 2 lastIndexOf() Search Methods
+      // The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+
+      let strLastIndxOf = "This is a sample text with sample content.";
+
+      document.write("2. " + strLastIndxOf.lastIndexOf("sample") + "<br><br>");
+      document.write("2. " + strLastIndxOf.lastIndexOf("World") + "<br><br>"); // return  -1 if the text is not found
+
+      // 3 String serach() Search Method
+
+      // The search() method searches a string for a string (or a regular expression) and returns the position of the match:
+
+      let strSearch = "Please locate where 'locate' occurs!";
+
+      document.write("3. " + strSearch.search("locate") + "<br><br>");
+      document.write("3. " + strSearch.search("sample") + "<br><br>");
+
+      // 4 match() Search Method
+      // it returns an array containing the results of matching a string against a string
+
+      let strMatch = "hii hello hey How Hello Hey world hey";
+
+      document.write("4." + strMatch.match("hey") + "<br><br>");
+      document.write("4." + strMatch.match("Vamshi") + "<br><br>"); // If no match is found, it returns null.
+      document.write("4." + strMatch.match(/hey/g) + "<br><br>"); // using regular expression to fing global
+      document.write("4." + strMatch.match(/hey/gi) + "<br><br>"); // using regular expression to fing global if the text is small or capital
+
+      // 5 mathcAll() Search Method
+
+      // it method returns an iterator containing the results of matching a string against a string (
+
+      let strMatchAll = "The quick brown fox jumps over the lazy dog";
+
+      document.write("5." + strMatchAll.match("fox") + "<br><br>");
+
+      // 6 includes() Search Method / includes() is case sensitive. /includes() is not supported in Internet Explorer. / includes() is an ES6 feature.
+
+      // it returns true if a string contains a specified value.Otherwise it returns false
+      let strInclude = "Heyy Good Evening";
+      document.write("6." + strInclude.includes("Heyy") + "<br><br>");
+      document.write("6." + strInclude.includes("Good", 2) + "<br><br>"); //A start position for the search can be specified:
+      document.write("6." + strInclude.includes("HEllo") + "<br><br>");
+
+      // 7 startsWith() Search Methods
+      // it returns true if a string ends with a specified value.Otherwise it returns false.
+
+      let strStartsWith = "koli infotech";
+
+      document.write("7." + strStartsWith.startsWith("koli") + "<br><br>");
+      document.write("7." + strStartsWith.startsWith("ka") + "<br><br>");
+      // 8 EndsWith() Search Methods
+      // it returns true if a string ends with a specified value.Otherwise it returns false.
+
+      let strEndsWith = "koli infotech";
+
+      document.write("8." + strEndsWith.endsWith("infotech") + "<br><br>");
+      document.write("8." + strEndsWith.endsWith("info") + "<br><br>");
+    </script>
+  </body>
+</html>

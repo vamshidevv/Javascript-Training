@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings</title>
+  </head>
+  <body>
+    <h2>Learning Strings</h2>
+
+    <script>
+      // strings using quotes
+
+      let txt1 = "HEllo"; //  using single quotes
+      let txt2 = "World"; //  using double quotes
+
+      document.write(txt1 + txt2);
+      document.write("<br><br>");
+
+      //Quotes Inside Quotes
+
+      let str1 = "Hii There ! 'Good Morning'";
+      let str2 = 'Hello "Iam Vamshi"';
+
+      document.write(str1);
+      document.write("<br><br>");
+      document.write(str2);
+      document.write("<br><br>");
+
+      // length of the string
+
+      let lngth1 = "To know The Length Of The String";
+
+      document.write("String Length : " + lngth1.length); // to find length use the built-in (length) property:
+      document.write("<br><br>");
+
+      //Escape Characters (\`) ,(\"), (\\)
+
+      let escp1 = "This is \`Esacape Character\`";
+      let escp2 = 'Another "Esacape Character"';
+
+      document.write(escp1);
+      document.write("<br><br>");
+      document.write(escp2);
+      document.write("<br><br>");
+
+      // JavaScript Strings as Objects
+
+      let strng = "Vamshi";
+
+      let strng2 = new String("HEllo");
+
+      document.write(typeof strng + "<br><br>" + typeof strng2 + "<br><br>");
+
+      // String objects can produce unexpected results:
+
+      let strng3 = new String("Hey");
+
+      let strObj = new String("Hey");
+
+      document.write(strng3 === strObj); //  Comparing two JavaScript objects always returns false.
+    </script>
+  </body>
+</html>
