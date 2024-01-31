@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Json</title>
+  </head>
+  <body>
+    <h2>Learning json</h2>
+  </body>
+  <script>
+    // 1
+    let jsonObj = {
+      name: "vamshi",
+      age: 23,
+    };
+    document.write(
+      ` 1 .  my name is ${jsonObj.name} and iam ${jsonObj.age} old`
+    );
+
+    // 2 json.parse()
+    // Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+
+    const cars = '{"name":"Kia", "color":"white", "year":2016}';
+    const obj = JSON.parse(cars);
+
+    console.log(obj.name);
+    console.log(obj["color"]); //  we can also acces like this 
+
+
+    // 3 JSON.Stringify
+
+    let person = { email: "em@gmai.com", Phone: 912534586 };
+
+    let str = JSON.stringify(person);
+    console.log(typeof str);
+    console.log(str);
+
+    let fruits = ["apple", "banana", "mango"];
+    let str2 = JSON.stringify(fruits);
+    console.log(typeof str2);
+    console.log(str2);
+  </script>
+</html>

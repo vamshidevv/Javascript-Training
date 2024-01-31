@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let rollNo = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        let arr = [2, 3, 2, 6, 3, 6];
+        resolve(arr);
+        // reject("Error");
+      }, 2000);
+    });
+
+    async function abc() {
+      let chk = await rollNo;
+      console.log(chk);
+    }
+    abc();
+
+    // =====================================================
+    async function test() {
+      let prom = new Promise((resolve, reject) => {
+        resolve("Hello Iam promise");
+        reject("errr");
+      });
+      console.log(await prom);
+      prom.catch((err) => console.log(err));
+    }
+    test();
+  </script>
+</html>
