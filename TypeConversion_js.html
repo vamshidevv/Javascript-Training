@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Conversion</title>
+  </head>
+  <body>
+    <h2>Type Conversion</h2>
+  </body>
+  <script>
+    // Type Conversion (coercion) and (conversion)
+    // JavaScript variables can be converted to a new variable and another data type:
+    // 1.  implicte conversion
+
+    let x = "5";
+    let y = 5;
+    let z = x + y;
+
+    document.write(`1 . ${z}<br><br>`);
+    document.write(`1 . ${typeof z}<br><br>`);
+
+    // 2 . explicite conversion
+
+    let a = "10";
+    let b = 10;
+    let c = Number(a) + b;
+
+    document.write(`2 . ${c}<br><br>`);
+    document.write(`2 . ${typeof c}<br><br>`);
+
+    // 3 . Unary + Operator
+    // The unary + operator can be used to convert a variable to a number:
+
+    let x1 = "5";
+    let y1 = +x1;
+    document.write(`3 . ${typeof x1}<br><br>`);
+    document.write(`3 . ${typeof y1}<br><br>`);
+
+    // 4 . converting Numbers to string
+
+    let a1 = 22;
+    let b1 = 22;
+    let c1 = String(a1) + b1;
+
+    document.write(`4 . ${c1}<br><br>`);
+    document.write(`4 . ${typeof c1}<br><br>`);
+
+    // 5 . Converting Dates to Number
+
+    let d = new Date();
+    let d1 = Number(d);
+    let d2 = d.getTime(); // The date method getTime() does the same.
+
+    document.write(`5 . ${typeof d}<br><br>`);
+    document.write(`5 . ${typeof d1}<br><br>`);
+    document.write(`5 . ${typeof d2}<br><br>`);
+
+    // 6 . Converting Date to String
+
+    let dt = new Date();
+    let dt1 = String(dt);
+    let dt2 = dt.toString(); // The Date method toString() does the same.
+
+    document.write(`6 . ${typeof dt}<br><br>`);
+    document.write(`6 . ${typeof dt1}<br><br>`);
+    document.write(`6 . ${typeof dt2}<br><br>`);
+
+    // 7 converting boolean to number
+
+    let blVal = true;
+    let blConvert = Number(blVal);
+
+    document.write(`7 . ${typeof blVal}<br><br>`);
+    document.write(`7 . ${typeof blConvert}<br><br>`);
+
+    // 8 converting boolean to string
+
+    let blVal2 = false;
+    let blConvert2 = String(blVal2);
+    let blConvert3 = blVal2.toString(); // The Boolean method toString() does the same.
+
+    document.write(`8 . ${typeof blVal2}<br><br>`);
+    document.write(`8 . ${typeof blConvert2}<br><br>`);
+    document.write(`8 . ${typeof blConvert3}<br><br>`);
+
+    // 9 convert number to boolean
+
+    let test = 23;
+    let testCon = Boolean(test);
+
+    document.write(`9 . ${typeof test}<br><br>`);
+    document.write(`9 . ${typeof testCon}<br><br>`);
+  </script>
+</html>

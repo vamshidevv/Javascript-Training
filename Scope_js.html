@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope</title>
+  </head>
+  <body>
+    <h2>Learning Scope</h2>
+  </body>
+  <script>
+    // 1 Local Scope
+    // Local variables have Function Scope:
+
+    let myFunc = () => {
+      let a = "good evening";
+      document.write(` 1 .${a}<br><br>`);
+    };
+    // console.log(` 1 .${a}`); // code here can NOT use a
+    myFunc();
+
+    //  2 Function Scope
+    let msg = () => {
+      let b = "Hello World"; //  function scope
+      document.write(` 2 .${b}<br><br>`);
+    };
+    msg();
+
+    // global scope
+
+    let name = "Vamshi"; //  this is the global scope variable we can use this in our entire code
+
+    let display = () => {
+      document.write(` 3 . My name is ${name}<br><br>`);
+    };
+    display();
+
+    // automatic global
+    // If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+
+    let autoMat = () => {
+      car = "skoda";
+    };
+    autoMat();
+    document.write(` 5 . ${car}`);
+  </script>
+</html>

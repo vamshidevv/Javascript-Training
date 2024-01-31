@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoisting</title>
+  </head>
+  <body>
+    <h2>Learning Hoisting</h2>
+  </body>
+  <script>
+    // 1 . with var variable
+
+    a = 5;
+    document.write(` 1 . ${a} <br><br>`);
+    var a;
+
+    // 2 with let
+    // hoisting is not working with let and const also
+
+    // b = 6;
+    // console.log(` 2 . ${a}`);
+    // let b;
+
+    // 3 .with function
+
+    sayHello(); // "Hello, World!"
+    function sayHello() {
+      document.write(" 2 . Good Evening! <br><br>");
+    }
+
+    // another one
+
+    msg(5, 15);
+    function msg(x, y) {
+      let z = x + y;
+      document.write(` 3  . ${z}`);
+    }
+  </script>
+</html>

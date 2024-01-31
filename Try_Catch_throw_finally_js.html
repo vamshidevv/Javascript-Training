@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Try Catch</title>
+  </head>
+  <body>
+    <h2>Learning Try Catch</h2>
+    enter value between 5 to 10 <br />
+    <input type="text" id="txt" />
+    <button onclick="chk()">Sub</button>
+    <p id="msg"></p>
+  </body>
+  <script>
+    try {
+      // Code that might throw an error
+      let result = someFunction();
+      console.log(result); // This line won't be reached if an error occurs
+    } catch (error) {
+      // Code to handle the error
+      console.error("An error occurred:", error.message);
+    }
+    // Code that always runs, whether there's an error or not
+    console.log("This will always execute.");
+
+    // throw
+    document.write(`<br><br>`);
+
+    function chk() {
+      let message = document.getElementById("msg");
+      message.innerHTML = "";
+      let uInp = document.getElementById("txt").value;
+      try {
+        if (uInp.trim() == "") throw "empty";
+        if (isNaN(uInp)) throw "not a number";
+        if (uInp < 6) throw "too low";
+        if (uInp > 10) throw "too high";
+        if (uInp > 5 && uInp < 11) throw "correct";
+      } catch (err) {
+        message.innerHTML = "Input is " + err;
+      } finally {
+        document.getElementById("txt").value = "";
+      }
+    }
+  </script>
+</html>

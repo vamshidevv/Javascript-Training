@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expression</title>
+  </head>
+  <body>
+    <h2>Learning regular Expression</h2>
+  </body>
+
+  <script>
+    // 1 replce the string
+
+    let str = "Hello Hii there Hello World ";
+    let regEx = /Hello/g;
+
+    document.write(`1 . ${str.replace("Hello", "replace")}<br><br>`); // so it will replace the first one only
+    document.write(`1 . ${str.replace(regEx, "replace")}<br><br>`);
+
+    // 2
+
+    let str2 = "wecome to Microsoft microsoft wecome you ";
+    let regEx2 = /microsoft/g; //  if we use simple regex it will only replace the small one
+    let regEx3 = /microsoft/gi; // 	i Perform case-insensitive matching
+    document.write(`2 . ${str2.replace(regEx2, "Koli Infotech")}<br><br>`);
+    document.write(`2 . ${str2.replace(regEx3, "Koli Infotech")}<br><br>`);
+
+    //   3 Write a JavaScript program to test whether the first character of a string is uppercase or not.
+
+    let chkStr = "Hello";
+    let regExfirstCaps = /^[A-Z]/; // (^) start of the string  ($) is for the end of the string
+    let otpt = "";
+    if (chkStr.match(regExfirstCaps)) {
+      otpt = "First letter is UpperCase";
+    } else {
+      otpt = "first letter is not uppercase";
+    }
+    document.write(` 3 . ${otpt}<br><br>`);
+
+    // 4 . mathc in regEx
+
+    let strMatch = "Visit Koli Infotech";
+    let reg = /Koli Infotech/gi;
+    let res = strMatch.match(reg);
+    document.write(` 4 . ${res}<br><br>`);
+
+    // 5 . test in regEx
+    // if the test get it return true or otherwise false
+
+    let testVal = "Welcome to Koli Infotech";
+    let regTest = /Welcome/i;
+    let res2 = regTest.test(testVal);
+    document.write(` 5 . ${res2}<br><br>`);
+
+    // 6 ignoreCase
+    // You can use the ignoreCase property to check if the "i" modifier is set.
+
+    let str3 = "Hello World";
+    let regcheck = /Hello/;
+    let regcheck2 = /Hello/i;
+    let result = regcheck.ignoreCase;
+    let result2 = regcheck2.ignoreCase;
+
+    document.write(` 6 . ${result}<br><br>`);
+    document.write(` 6 . ${result2}<br><br>`);
+
+    // 7  m modifier
+
+    let mText = `Is this
+all there
+is`;
+
+    let Result = /^is/m;
+    let regresult = mText.match(Result);
+
+    document.write(` 7 . ${regresult}<br><br>`);
+
+    // 8 regEx group (x|y) or
+    // The (x|y) expression is used to find any of the alternatives specified.
+
+    let clr = "white,green,yellow,orange,white,green,red";
+    let regClr = /green|white/g;
+    let resClr = clr.match(regClr);
+
+    document.write(` 8 . ${resClr}<br><br>`);
+
+    //  Metacharacters
+    // 9 \w metacharacter
+    // The \w metacharacter matches word characters.A word character is a character a-z, A-Z, 0-9, including _ (underscore).
+
+    let wChar = "Hello 50%!";
+    let pattern = /\w/g;
+    let wRes = wChar.match(pattern);
+
+    document.write(` 9 . ${wRes}<br><br>`);
+
+    // 10 \W  metacharacter
+    // The \W metacharacter matches non-word characters:A word character is a character a-z, A-Z, 0-9, including _ (underscore).
+
+    let text = "Give 100%!";
+    let pattern2 = /\W/g;
+    let result3 = text.match(pattern2);
+    document.write(` 10 . ${result3}<br><br>`);
+
+    // 11 \d metacharacter
+    // The \d metacharacter matches digits from 0 to 9.
+
+    let digit = "Rupess 150%";
+    let patterDigit = /\d/g;
+    let digitRes = digit.match(patterDigit);
+
+    document.write(` 11 . ${digitRes}<br><br>`);
+
+    // 12 /D metacharacter
+    // The \D metacharacter matches non-digit characters.
+
+
+
+    let Dig = "heyy 20%!";
+    let digPattern = /\D/g;
+    let digRes = Dig.match(digPattern);
+
+    document.write(` 12 . ${digRes}<br><br>`);
+  </script>
+</html>
