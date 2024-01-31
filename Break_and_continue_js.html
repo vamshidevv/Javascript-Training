@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Break and Continue</title>
+  </head>
+  <body>
+    <h2>Learning Break and Contniue</h2>
+  </body>
+  <script>
+    // 1 break .
+
+    let programs = ["js", "python", "java", "c", "c++"];
+    let test = "";
+    list: {
+      test += programs[0] + "<br>";
+      test += programs[1] + "<br>";
+      test += programs[2] + "<br>";
+      break list;
+      test += programs[3] + "<br>";
+      test += programs[4] + "<br>";
+    }
+    document.write(test + "<br><br>");
+
+    // 2 another example of break
+
+    let arr = [1, 2, 3, 4, 6, 7, 8, 9];
+
+    for (let i = 1; i < arr.length; i++) {
+      if (i === 5) {
+        break;
+      }
+      document.write(" " + i);
+    }
+    document.write("<br><br>");
+
+    //  3 continue
+
+    let arrNum = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    for (let i = 1; i < arrNum.length; i++) {
+      if (i === 5) {
+        continue;
+      }
+      document.write(`${i}`);
+    }
+  </script>
+</html>

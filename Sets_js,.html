@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sets</title>
+  </head>
+  <body>
+    <h2>Learning Sets</h2>
+  </body>
+  <script>
+    // 1 Create set
+
+    let mySet = new Set();
+    // add some values to the set
+    mySet.add(1);
+    mySet.add(3);
+    mySet.add(9);
+    mySet.add(2);
+    mySet.add({ name: "vamshi" });
+    // print the set
+    // console.log(mySet.clear());
+    console.log(mySet);
+    console.log(mySet.values());
+
+    // check the size of the set
+    console.log(mySet.size);
+    // check if a value exists in the set using has method
+    console.log(mySet.has(3));
+    console.log(mySet.has(10));
+    // remove a value from the set using delete method
+
+    console.log(mySet.delete(3)); // it returns true which means the value is deleted otherwise it returns false
+
+    // iterate over the values
+
+    for (const x of mySet) {
+      console.log(x);
+
+    }
+    // in this array we can remove the duplicate values using set
+
+    let arr = [1, 2, 3, 3, 3, 5, 5, 6, 7, 8, 8];
+
+    let mySetArr = new Set(arr);
+    console.log(mySetArr);
+
+    // we get can get seperate value with the help of the set
+
+    let text = "Vamshi";
+    let mySetText = new Set(text);
+    console.log(mySetText);
+  </script>
+</html>

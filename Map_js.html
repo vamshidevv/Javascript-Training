@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+  </head>
+  <body>
+    <h2>Learning Map</h2>
+  </body>
+  <script>
+    // 1 Map
+
+    let myMap = new Map();
+
+    myMap.set("name", "sujay");
+    myMap.set("age", 23);
+    myMap.set("city", "surat");
+    myMap.set("rollNo", 18);
+    myMap.set("name", "vamshi");
+
+    console.log(myMap);
+    // delete value using delete
+
+    myMap.delete("rollNo");
+    console.log(myMap);
+
+    //  get value using get
+
+    console.log(myMap.get("name"));
+
+    // iterate over the value
+
+    for (const val of myMap) {
+      console.log(val);
+    }
+
+    // chekc the value in map
+
+    myMap.has("age");
+    console.log(myMap);
+
+    // check the length of the Map
+    console.log(myMap.size);
+  </script>
+</html>
