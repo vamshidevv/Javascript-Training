@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this key word</title>
+  </head>
+  <body>
+    <h2>Learning this keyword</h2>
+  </body>
+  <script>
+    // 1
+    let bioData = {
+      fname: "vamshi",
+      lname: "bandari",
+      age: 23,
+
+      fullName: function () {
+        return this.fname + " " + this.lname;
+      },
+    };
+    document.write(`1 . ${bioData.fullName()} <br><br>`);
+
+    // 2
+    // When used alone, this refers to the global object.
+
+    let x = this;
+    console.log(x);
+
+    // 3
+    // In a function, the global object is the default binding for this.
+
+    function test() {
+      return this;
+    }
+    console.log(test());
+
+    // 4 The call method allows you to explicitly set the context in which a function is called and pass arguments to the function.
+
+    let firstPerson = {
+      fname: "vamshi",
+      lname: "bandari",
+      flname: function (hometown, country, location) {
+        return (
+          this.fname +
+          " " +
+          this.lname +
+          " " +
+          hometown +
+          " " +
+          country +
+          " " +
+          location
+        );
+      },
+    };
+
+    let secondPerson = {
+      fname: "sujay",
+      lname: "lastname",
+    };
+    document.write(
+      `4 . ${firstPerson.flname.call(secondPerson, "surat", "india")}<br><br>`
+    );
+
+    // 5 apply method
+    // The apply method is similar to call, but it takes an array-like object as its second parameter, which is used as the array of arguments for the function.
+
+    document.write(
+      `5 . ${firstPerson.flname.apply(secondPerson, [
+        "surat",
+        "india",
+        "althan",
+      ])}<br><br>`
+    );
+
+    //  6 bind Sometimes the bind() method has to be used to prevent losing this.
+
+    let person1 = {
+      name: "sujay",
+      surname: "surname",
+      propername: function (hometown) {
+        return this.name + " " + this.surname + " " + hometown;
+      },
+    };
+
+    let person2 = {
+      name: "vamshi",
+      surname: "bandari",
+    };
+
+    let result = person1.propername.bind(person2, "surat");
+
+    document.write(` 6 . ${result()}<br><br>`);
+
+    // 7 another one with call
+
+    let obj1 = {
+      fname: "sujay",
+      age: 23,
+      bioData: function (hometown, country) {
+        return (
+          "my name is " +
+          this.fname +
+          " " +
+          "and my age is " +
+          " " +
+          this.age +
+          " " +
+          "iam from " +
+          hometown +
+          " " +
+          country
+        );
+      },
+    };
+
+    let obj2 = {
+      fname: "mahesh",
+      age: 24,
+    };
+
+    document.write(` 7  ${obj1.bioData.call(obj2, "surat", "india")}<br><br>`);
+
+    // 8 another one with apply
+
+    document.write(` 8  ${obj1.bioData.apply(obj2, ["surat", "india"])}`);
+  </script>
+</html>

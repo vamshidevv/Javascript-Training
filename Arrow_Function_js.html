@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <h2>Learning Arrow Function</h2>
+  </body>
+  <script>
+    // 1 Arrow Functions Return Value by Default:
+
+    let test = () => "hello world";
+
+    document.write(`1. ${test()}<br><br>`);
+
+    // 2 In fact, if you have only one parameter, you can skip the parentheses as well:
+
+    let strNum = (age) => "Age is " + age;
+    document.write(`2. ${strNum(23)}<br><br>`);
+
+    // 3 basic with arrow function
+
+    let mulNum = (a, b) => a * b;
+
+    document.write(" 3. " + mulNum(10, 5) + "<br><br>");
+
+    // 4 Multiline arrow functions
+
+    // the curly brace opens a multiline function
+    let addNum = (x, y) => {
+      let result = x + y; // if we use curly braces, then we need an explicit "return"
+      return result;
+    };
+    document.write(`4. ${addNum(15, 13)}<br><br>`);
+
+    // 5 call back function using arrow function
+
+    let funcA = (friend, greet) => {
+      console.log(`Hello ${friend}`);
+      greet(10, 20);
+    };
+
+    let funcB = (b, c) => {
+      console.log("Good Morning");
+      return b + c;
+    };
+    funcA("vamshi", funcB);
+  </script>
+</html>

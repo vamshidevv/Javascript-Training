@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes</title>
+  </head>
+  <body>
+    <h2>Learning Classes</h2>
+  </body>
+  <script>
+    // 1 class ex:
+
+    // Define the 'students' class
+
+    class students {
+      // Constructor to initialize the object with name, age, and class properties
+      constructor(name, age, cls) {
+        this.myName = name;
+        this.myAge = age;
+        this.myClass = cls;
+      }
+      // Method to display information about the student
+
+      bioData() {
+        // Method
+        document.write(
+          `1.  Hi My  Name is ${this.myName} and iam ${this.myAge} years old and iam in class ${this.myClass}<br><br>`
+        );
+      }
+    }
+    // Create an instance of the 'students' class
+
+    let obj1 = new students("Vamshi", 18, 12);
+    // Call the 'bioData' method to display the student's information
+    obj1.bioData();
+    let obj2 = new students("vams", 23, "BCA");
+    obj2.bioData();
+
+    // 2 inheritance
+
+    class cars {
+      constructor(name, color) {
+        this.carName = name;
+        this.carColor = color;
+      }
+
+      // instance method
+
+      displayInfo() {
+        return `2. carname : ${this.carName} , carcolor : ${this.carColor}  `;
+      }
+    }
+
+    class secondcar extends cars {
+      constructor(name, color, year) {
+        super();
+        this.carName = name;
+        this.carColor = color;
+        this.carYear = year;
+      }
+      displayInfo2() {
+        return `${super.displayInfo()} ,  year : ${this.carYear}`;
+      }
+    } // inherites the cars class
+
+    let carsObj1 = new cars("kia", "white");
+    document.write(`${carsObj1.displayInfo()}<br><br>`);
+
+    let secondObj = new secondcar("skoda", "black", 2014);
+    document.write(`${secondObj.displayInfo2()}`);
+  
+  </script>
+</html>
