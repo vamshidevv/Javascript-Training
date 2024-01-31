@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>random</title>
+  </head>
+  <body>
+    <h2>Learning random</h2>
+
+    <script>
+      // 1 . Math.random()
+      // Returns a random integer from 0 to 9:
+
+      let ranNum = Math.trunc(Math.random() * 10);
+
+      document.write(`1 . ${ranNum}<br><br>`);
+
+      //  2 .Math.random()
+      //  Returns a random integer from 0 to 10:
+
+      let ranNum2 = Math.trunc(Math.random() * 11);
+      document.write(`2 . ${ranNum2}<br><br>`);
+
+      //  3 .Math.random()
+      //  Returns a random integer from 0 to 99:
+
+      let ranNum3 = Math.trunc(Math.random() * 100);
+      document.write(`3. ${ranNum3}<br><br>`);
+
+      //  4 .Math.random()
+      //  Returns a random integer from 1 to 10:
+
+      let ranNum4 = Math.trunc(Math.random() * 10) + 1;
+      document.write(`4. ${ranNum4}<br><br>`);
+    </script>
+  </body>
+</html>

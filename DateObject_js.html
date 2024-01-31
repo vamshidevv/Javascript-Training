@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Object</title>
+  </head>
+  <body>
+    <h2>Learning Date Object</h2>
+  </body>
+  <script>
+    // 1 .new Date()
+
+    let date = new Date();
+    document.write(`1 . ${date}<br><br>`);
+
+    let dateString = new Date("january 21, 2024 12:12:00"); // creates a date object from a date string:
+    document.write(`1 . ${dateString}<br><br>`);
+
+    let date2 = new Date("2024-1-22");
+    document.write(`1 . ${date2}<br><br>`);
+
+    let d = new Date(2024, 2, 6, 11, 11, 11, 12); // year, month , date, hour:min:sec:millisecs . JavaScript counts months from 0 to 11:
+    document.write(`1 . ${d}<br><br>`);
+
+    let d2 = new Date(2024, 2, 40, 12, 12, 12); // Specifying a day higher than max, will not result in an error but add the overflow to the next month:
+    document.write(`1 . ${d2}<br><br>`);
+
+    let d3 = new Date(99, 2, 6); // Two digit years will be interpreted as 19xx:
+    document.write(`1 . ${d3}<br><br>`);
+
+    const d4 = new Date(100000000000);
+    document.write(`1 . ${d4}<br><br>`);
+
+    // 2 toDateString()
+    // The toDateString() method converts a date to a more readable format:
+
+    let todt1 = new Date();
+    document.write(`2 . ${todt1.toDateString()}<br><br>`);
+
+    //  3 toUTCString()
+    // The toUTCString() method converts a date to a string using the UTC standard:
+
+    let utcDate = new Date();
+    document.write(`3 . ${utcDate.toUTCString()}<br><br>`);
+
+    //  4 toISOString()
+    // The toISOString() method converts a date to a string using the ISO standard:
+
+    let isoDate = new Date();
+    document.write(`4 . ${isoDate.toISOString()}<br><br>`);
+  </script>
+</html>

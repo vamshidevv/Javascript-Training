@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Object</title>
+  </head>
+  <body>
+    <h2>Learning Math Object</h2>
+  </body>
+  <script>
+    // The JavaScript Math object allows you to perform mathematical tasks on numbers.
+
+    // Math Method . Numbers to integer
+
+    // 1 . Math.round()
+    // Math.round(x) returns the nearest integer:
+
+    let nearestInt = 7.6;
+    let nearestInt2 = 7.4;
+    let nearestInt3 = 7.5;
+
+    document.write(`1 . ${Math.round(nearestInt)}<br><br>`);
+    document.write(`1 . ${Math.round(nearestInt2)}<br><br>`);
+    document.write(`1 . ${Math.round(nearestInt3)}<br><br>`);
+
+    //2 . Math.ceil()
+    // Math.ceil(x) returns the value of x rounded up to its nearest integer:
+
+    let uptoInt1 = 6.3;
+    let uptoInt2 = 6.0;
+    let uptoInt3 = 6.1;
+
+    document.write(`2 . ${Math.ceil(uptoInt1)}<br><br>`);
+    document.write(`2 . ${Math.ceil(uptoInt2)}<br><br>`);
+    document.write(`2 . ${Math.ceil(uptoInt3)}<br><br>`);
+
+    //3 . Math.floor(x)
+    // Math.floor(x) returns the value of x rounded down to its nearest integer:
+
+    let dwnToInt = 2.9;
+    let dwnToInt2 = -2.1;
+
+    document.write(`3 . ${Math.floor(dwnToInt)}<br><br>`);
+    document.write(`3 . ${Math.floor(dwnToInt2)}<br><br>`);
+
+    // 4 .Math.trunc()
+    // Math.trunc(x) returns the integer part of x:
+
+    let truncInt = 8.5;
+    let truncInt2 = -8.6;
+    let truncInt3 = 8.8;
+
+    document.write(`4 . ${Math.trunc(truncInt)}<br><br>`);
+    document.write(`4 . ${Math.trunc(truncInt2)}<br><br>`);
+    document.write(`4 . ${Math.trunc(truncInt3)}<br><br>`);
+
+    //  5 Math.sign()
+    //  Math.sign(x) returns if x is negative, null or positive:
+    //     1 if the number is positive.
+    //    -1 if the number is negative.
+    //     0 if the number is zero.
+
+    let signNum = 6;
+    let signNum2 = -3;
+    let signNum3 = 0;
+
+    document.write(`5 . ${Math.sign(signNum)}<br><br>`);
+    document.write(`5 . ${Math.sign(signNum2)}<br><br>`);
+    document.write(`5 . ${Math.sign(signNum3)}<br><br>`);
+
+    // 6 Math.pow()
+    // Math.pow(x, y) returns the value of x to the power of y:
+
+    let powNum1 = 10;
+    let powNum2 = 2;
+    document.write(`6 . ${Math.pow(powNum1, powNum2)}<br><br>`);
+
+    //  7 Math.sqrt()
+    // Math.sqrt(x) returns the square root of x:
+
+    let sqrNum = 25;
+
+    document.write(`7 . ${Math.sqrt(sqrNum)}<br><br>`);
+
+    // 8 Math.abs(x)
+    // Math.abs(x) returns the absolute (positive) value of x:
+
+    let absVal = -7.5;
+
+    document.write(`8 . ${Math.abs(absVal)}<br><br>`);
+
+    //  9 Math.min()
+    // Math.min() can be used to find lowest value in list arguments
+
+    document.write(`9 . ${Math.min(5, 3, 6, 2, 41, 8, 6)}<br><br>`);
+
+    // 10 Math.max()
+    // Math.max() can be used to find highest value in list arguments
+
+    document.write(
+      `10 . ${Math.max(2, 1, 5, 10, 12, 14, 6, 3, 8, 19)}<br><br>`
+    );
+
+    // 11 . Math.random()
+    // Math.random() returns a random number between 0 (inclusive), and 1 (exclusive):
+
+    var randomValue = Math.random();
+
+    document.write(`11 . ${randomValue}<br><br>`);
+
+    // 12 . Math.log(x)
+    // Math.log(x) returns the natural logarithm of x.
+
+    let logNum = Math.log(1);
+    let logNum2 = Math.log(6);
+
+    document.write(`12 . ${logNum}<br><br>`);
+    document.write(`12 . ${logNum2}<br><br>`);
+
+    // 13 Math.log2()
+    // Math.log2(x) returns the base 2 logarithm of x.
+
+    let x1 = 8;
+    let x2 = 16;
+    let result = Math.log2(x1); // 2*2*2
+    let result2 = Math.log2(x2); // 2*2*2*2
+    document.write(`13 . ${result}<br><br>`);
+    document.write(`13 . ${result2}<br><br>`);
+
+    // 14 Math.log10()
+
+    let x3 = 100000;
+    let x4 = 1000;
+    let result3 = Math.log10(x3);
+    let result4 = Math.log10(x4);
+    document.write(`14 . ${result3}<br><br>`);
+    document.write(`14 . ${result4}<br><br>`);
+  </script>
+</html>

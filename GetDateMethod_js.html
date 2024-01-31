@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Date Method</title>
+  </head>
+  <body>
+    <h2>Learning Get Date Method</h2>
+  </body>
+  <script>
+    // 1 . getFullYear() Method
+    // The getFullYear() method returns the year of a date as a four digit number:Get year as a four digit number (yyyy)
+
+    let gtYear = new Date();
+
+    document.write(`1 .  ${gtYear.getFullYear()}<br><br>`);
+
+    // 2 . getMonth()
+    // The getMonth() method returns the month of a date as a number (0-11).
+
+    let gtMonth = new Date();
+
+    document.write(`2 .  ${gtMonth.getMonth()}<br><br>`);
+
+    // You can use an array of names to return the month as a name:
+
+    let gtMonthArr = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    let dt = new Date();
+
+    document.write(`2 .  ${gtMonthArr[dt.getMonth()]}<br><br>`);
+
+    // 3 getDate()
+    // The getDate() method returns the day of a date as a number (1-31):
+
+    let gtDate = new Date();
+    document.write(`3 .  ${gtMonth.getDate()}<br><br>`);
+
+    // 4 getHours()
+    // The getHours() method returns the hours of a date as a number (0-23):
+
+    let gtHours = new Date();
+
+    document.write(`4 .  ${gtHours.getHours()}<br><br>`);
+
+    // 5 getMinutes()
+    // The getMinutes() method returns the minutes of a date as a number (0-59):
+
+    let gtMinutes = new Date();
+    document.write(`5 .  ${gtMinutes.getMinutes()}<br><br>`);
+
+    // 6 getSeconds()
+    // The getSeconds() method returns the seconds of a date as a number (0-59):
+
+    let gtSeconds = new Date();
+
+    document.write(`6 .  ${gtSeconds.getSeconds()}<br><br>`);
+
+    // 7 getMilliseconds()
+    // The getMilliseconds() method returns the milliseconds of a date as a number (0-999):
+
+    let gtMilliSecs = new Date();
+
+    document.write(`7 .  ${gtMilliSecs.getMilliseconds()}<br><br>`);
+
+    // 8 getDay()
+    // The getDay() method returns the weekday of a date as a number (0-6).In JavaScript, the first day of the week (day 0) is Sunday.
+    let gtDay = new Date();
+
+    document.write(`8 .  ${gtDay.getDay()}<br><br>`);
+
+    let gtDayArr = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+
+    let dDay = new Date();
+    document.write(`8 .  ${gtDayArr[dDay.getDay()]}<br><br>`);
+
+    // 9 getTime()
+    // The getTime() method returns the number of milliseconds since January 1, 1970:
+
+    let gtTime = new Date();
+    let gtTime2 = new Date("2023-3-6");
+
+    document.write(`9 .  ${gtTime.getTime()}<br><br>`);
+    document.write(`9 .  ${gtTime2.getTime()}<br><br>`);
+
+    // 10 Date.now()
+    // Date.now() returns the number of milliseconds since January 1, 1970.This date is also known as the UNIX epoch.
+
+    let dtNow = Date.now();
+
+    console.log("= > " + dtNow); // = > 1705899911914
+
+    let minutes = 1000 * 60;
+    let hours = minutes * 60;
+    let day = hours * 24;
+    let year = day * 365;
+
+    document.write(`10 .  ${Math.round(Date.now() / year)}<br><br>`);
+
+    // 11 getTimezoneOffset()
+    // The getTimezoneOffset() method returns the difference (in minutes) between local time an UTC time:
+
+    let dtTimeZoneOfSet = new Date();
+    document.write(`11 .  ${dtTimeZoneOfSet.getTimezoneOffset()}<br><br>`);
+  </script>
+</html>

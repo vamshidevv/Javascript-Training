@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Date Method</title>
+  </head>
+  <body>
+    <h2>Learning Set Date Method</h2>
+
+    <script>
+      // 1 setFullYear()
+      // The setFullYear() method sets the year of a date object. In this example to 2020:
+
+      let stYear = new Date();
+      stYear.setFullYear(2022);
+
+      document.write(`1 . ${stYear}<br><br>`);
+
+      // The setFullYear() method can optionally set month and day:
+
+      let stYear2 = new Date();
+      stYear2.setFullYear(2022, 2, 6);
+      document.write(`1 . ${stYear2}<br><br>`);
+
+      // 2 setMonth()
+      // The setMonth() method sets the month of a date object (0-11):
+      let stMonth = new Date();
+      stMonth.setMonth(10);
+      document.write(`2 . ${stMonth}<br><br>`);
+
+      // 3  setDate()
+      // The setDate() method sets the day of a date object (1-31):
+      let stDate = new Date();
+      stDate.setDate(10);
+      document.write(`3 . ${stDate}<br><br>`);
+
+      // The setDate() method can also be used to add days to a date:
+
+      let stDate2 = new Date();
+      stDate2.setDate(31 + 2);
+      document.write(`3 . ${stDate2}<br><br>`);
+
+      // 4 setHours()
+      // The setHours() method sets the hours of a date object (0-23):
+
+      let stHours = new Date();
+      stHours.setHours(18);
+      document.write(`4 . ${stHours}<br><br>`);
+
+      // 5 setMinutes()
+      // The setMinutes() method sets the minutes of a date object (0-59):
+
+      let stMinutes = new Date();
+
+      stMinutes.setMinutes(50);
+      document.write(`5 . ${stMinutes}<br><br>`);
+
+      // 6 setSeconds()
+      // The setSeconds() method sets the seconds of a date object (0-59):
+
+      let stSecs = new Date();
+      stSecs.setSeconds(55);
+
+      document.write(`6 . ${stSecs}<br><br>`);
+
+      //  7 Compare Dates
+
+      let msg = "";
+      let present = new Date();
+      let future = new Date();
+      future.setFullYear(2050, 10, 6);
+
+      if (future > present) {
+        msg = "Today is before november 6 , 2050";
+      } else {
+        msg = "Today is after november 6 , 2050";
+      }
+      document.write(`7 . ${msg}<br><br>`);
+    </script>
+  </body>
+</html>

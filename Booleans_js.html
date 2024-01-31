@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booleans</title>
+  </head>
+  <body>
+    <h2>Learning Booleans</h2>
+  </body>
+  <script>
+    // 1 . Boolean() function
+    // A JavaScript Boolean represents one of two values: true or false.
+
+    let x = 5;
+    let y = 3;
+    document.write(` 1 . ${Boolean(x > y)}<br><br>`);
+    document.write(` 1 . ${x < y}<br><br>`); // Even Easier
+
+    // Everything With a "Value" is True
+    let x2 = 15;
+    let y2 = "Hello World";
+
+    document.write(` 2 . ${Boolean(x2)}<br><br>`);
+    document.write(` 2 . ${Boolean(y2)}<br><br>`);
+
+    // Everything Without a "Value" is False
+
+    let x3 = 0;
+    let x4;
+    let x5 = -0;
+    document.write(` 3 . ${Boolean(x3)}<br><br>`);
+    document.write(` 3 . ${Boolean(x4)}<br><br>`);
+    document.write(` 3 . ${Boolean(x5)}<br><br>`);
+
+    //  4 The Boolean value of NaN is false:
+
+    let x6 = 15 / "heyy";
+    document.write(` 4 . ${Boolean(x6)}<br><br>`);
+
+    //  5  booleans can also be defined as objects with the keyword new:
+    let x7 = false;
+    let x8 = new Boolean(false);
+    document.write(` 5 . ${typeof x7}<br><br>`);
+    document.write(` 5 . ${typeof x8}<br><br>`);
+
+    //  6 Comparing two JavaScript objects always return false.
+
+    let a = new Boolean(false);
+    let b = new Boolean(false);
+    document.write(` 6 . ${a === b}<br><br>`);
+  </script>
+</html>

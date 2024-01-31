@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Const</title>
+  </head>
+  <body>
+    <h2>Learning Array Const</h2>
+    <script>
+      // In 2015, JavaScript introduced an important new keyword: const.
+      // It has become a common practice to declare arrays using const:
+
+      //  1 declare a array using const
+
+      const favProg = ["js", "nodeJs", "c", "python"];
+      document.write(`1. ${favProg}<br><br>`);
+
+      // reassign arr using const
+
+      const vehicles = ["cars", "bus", "bike"];
+    //   vehicles = ["cycle", "bike"]; // An array declared with const cannot be reassigned:
+      document.write(`2. ${vehicles}<br><br>`);
+
+      const fruits = ["kiwi", "mango", "apple"];
+      fruits[0] = "orange";  // Elements Can be Reassigned
+      document.write(`3. ${fruits}<br><br>`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Iteration</title>
+  </head>
+  <body>
+    <h2>Learning Array Iteration</h2>
+  </body>
+  <script>
+    // 1 . forEach()
+    // The forEach() method calls a function (a callback function) once for each array element.
+
+    let arrForEach = ["y", "z", "x"];
+    arrForEach.forEach((elem, index, array) => document.write(" " + elem));
+    document.write("<br><br>");
+
+    // add 100 in each element using foreach
+
+    let addElem = [20, 10, 3, 25, 30, 45];
+    console.log(addElem);
+
+    addElem.forEach((elem, indx, arr) => {
+      console.log(arr[indx] + 100);
+    });
+
+    // 2 map()
+    // The map() method creates a new array by performing a function on each array element.
+
+    let mapNum = [12, 5, 3, 6, 4];
+    document.write(mapNum + " <br><br>");
+    mapNum.map((elem, indx, arr) => {
+      document.write(` ${elem * 2}`);
+    });
+    document.write("<br><br>");
+
+    // 3 flat()
+    // The flatMap() method first maps all elements of an array and then creates a new array by flattening the array.
+
+    let fltMap = [2, 1, 4, 5, 6, 2];
+    let fltMapFinal = fltMap.flatMap((elem) => elem * 10);
+
+    document.write("3. " + fltMapFinal + "<br><br>");
+
+    // 4 filter()
+
+    let filNum = [2, 6, 10, 22, 5, 56, 13, 16, 23];
+
+    let filterdNum = filNum.filter((elem) => {
+      return elem > 15;
+    });
+    document.write("4.  " + filterdNum + "<br><br>");
+
+    //  5 reduce()
+    // The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+
+    let redcNum = [1, 2, 3, 4, 5];
+    let redcTotalNum = redcNum.reduce((total, value) => total + value);
+    document.write(`5. ${redcTotalNum}<br><br>`);
+
+    // 6 reduceRight()
+    // The reduceRight() method runs a function on each array element to produce (reduce it to) a single value.
+    let rightRdc = [1, 2, 3, 4, 6];
+    let rightRdcFinal = rightRdc.reduceRight((total, val) => total + val);
+    document.write(`6. ${rightRdcFinal}<br><br>`);
+
+    // 7 every()
+    // The every() method checks if all array values pass a test.
+
+    let everyNum = [15, 12, 16, 17, 18, 22, 20, 2, 6, 3];
+
+    let everyNumResult = everyNum.every((elem) => {
+      return elem > 10;
+    });
+    let everyNum2 = [5, 6, 3, 7, 8, 9];
+
+    let everyNum2Result = everyNum2.every((elem) => {
+      return elem > 2;
+    });
+
+    document.write(`7. ${everyNumResult}<br><br>`);
+    document.write(`7. ${everyNum2Result}<br><br>`);
+
+    // 8 some()
+
+    let someNum = [5, 3, 10, 12, 13, 16, 18];
+
+    let someNumResult = someNum.some((elem) => {
+      return elem > 10;
+    });
+    document.write(`8. ${someNumResult}<br><br>`);
+
+    // 9 from()
+    // The Array.from() method returns an Array object from any object with a length property or any iterable object.
+    let fromArr = ["a", "b", "c", "d"];
+    let newFrom = Array.from(fromArr);
+
+    document.write(`9. ${fromArr}<br><br>`);
+    document.write(`9. ${newFrom}<br><br>`);
+
+    // 10 keys()
+    // The Array.keys() method returns an Array Iterator object with the keys of an array.
+
+    let keyNum = [6, 9, 5, 23, 6, 4];
+    let resultKey = keyNum.keys();
+
+    for (const key of resultKey) {
+      document.write(`10. ${key}<br><br>`);
+    }
+    // 11 entries
+    // The entries() method returns an Array Iterator object with key/value pairs:
+
+    let entNum = [6, 9, 5, 23, 6, 4];
+    let entNumresult = keyNum.keys();
+
+    for (const entry of entNumresult) {
+      document.write(` ${entry} <br><br>`);
+    }
+
+    // 12 spread (...)
+    // The ... operator expands an iterable (like an array) into more elements:
+
+    let arr1 = [3, 5, 6];
+    let arr2 = [9, 10, 23];
+    let arr3 = [...arr1, ...arr2 , 24];
+    document.write(`12. ${arr3}<br><br>`);
+  </script>
+</html>
