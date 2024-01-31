@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ifelse and elseif</title>
+  </head>
+  <body>
+    <h2>Learning ifelse adn elseif</h2>
+
+    <script>
+      // 1 if statement
+
+      if (new Date().getHours() < 18) {
+        document.write(`1 .  Good Day<br><br>`);
+      }
+
+      // 2 else Statement
+
+      if (new Date().getHours() < 15) {
+        document.write(`2 .  Good Day <br><br>`);
+      } else {
+        document.write(` 2 . good afternoon <br><br>`);
+      }
+
+      // 3 elseif statement
+      let tm = new Date().getHours();
+
+      if (tm < 11) {
+        document.write(`3 .  Good Morning <br><br>`);
+      } else if (tm > 17) {
+        document.write(`3 .  Good Day <br><br>`);
+      } else {
+        document.write(`3 .  Good Afternoon <br><br>`);
+      }
+    </script>
+  </body>
+</html>

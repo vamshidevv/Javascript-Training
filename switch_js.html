@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch</title>
+  </head>
+  <body>
+    <h2>Learning Switch Statement</h2>
+  </body>
+  <script>
+    let day;
+    switch (new Date().getMonth()) {
+      case 0:
+        day = "January";
+        break;
+      case 1:
+        day = "February";
+        break;
+      case 2:
+        day = "March";
+        break;
+      case 3:
+        day = "April";
+        break;
+      case 4:
+        day = "May";
+        break;
+      case 5:
+        day = "June";
+        break;
+      case 6:
+        day = "July";
+        break;
+      case 7:
+        day = "Agust";
+        break;
+      case 8:
+        day = "September";
+        break;
+      case 9:
+        day = "Ocober";
+        break;
+      case 10:
+        day = "November";
+        break;
+      case 11:
+        day = "December";
+        break;
+    }
+    document.write(` 1 . The Month is ${day}<br><br>`);
+
+    // 2 default keyword
+
+    let msg;
+    switch (new Date().getDate()) {
+      case 5:
+        msg = "Today is Sunday";
+        break;
+      case 1:
+        msg = "Today is Moday";
+        break;
+
+      default:
+        msg = "looking for the weekend";
+    }
+    document.write(` 2 .  ${msg}<br><br>`);
+
+    let day2 = "Monday";
+
+    // 3
+
+    switch (day2) {
+      case "Monday":
+        document.write(" 3 . It's the start of the week");
+        break;
+      case "Friday":
+        document.write(" 3 . It's almost the weekend");
+        break;
+      default:
+        document.write(" 3 . It's a regular day");
+    }
+  </script>
+</html>

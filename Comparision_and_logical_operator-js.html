@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparison and logcal operator</title>
+  </head>
+  <body>
+    <h2>Comparison and logcal operator</h2>
+
+    <script>
+      // 1  comparing different types
+
+      let x1 = 2 < 3;
+      let x2 = 2 < "3";
+      let x3 = 2 < "Hey";
+      let x4 = "4" < "3";
+
+      document.write(`1 . ${x1}<br><br>`);
+      document.write(`1 . ${x2}<br><br>`);
+      document.write(`1 . ${x3}<br><br>`);
+      document.write(`1 . ${x4}<br><br>`);
+
+      // 2  Nullish Nullish Coalescing Operator (??)
+      // The ?? operator returns the first argument if it is not nullish (null or undefined).Otherwise it returns the second argument.
+
+      let first = null;
+      let second = "World";
+      let result = first ?? second;
+
+      document.write(`2 . Hello ${result}<br><br>`);
+
+      // 3  Optional Chaining Operator (?.)
+
+      let person = { name: "vamshi", age: 23 };
+      let personDetail = person?.name;
+      let personDetail2 = person?.heigth;
+
+      document.write(`3 .  ${personDetail}<br><br>`);
+      document.write(`3 .  ${personDetail2}<br><br>`);
+
+      // 4  Logical Operator
+
+      let a = 5;
+      let b = 10;
+
+      document.write(`4 .  ${a < 6 || b < 5}<br><br>`);
+      document.write(`4 .  ${a < 6 && b < 5}<br><br>`);
+    </script>
+  </body>
+</html>

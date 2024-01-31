@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+  </head>
+  <body>
+    <h2>Learning Loops</h2>
+  </body>
+  <script>
+    // 1  for loop
+    // The for statement creates a loop with 3 optional expressions:
+
+    let txt = "";
+    for (let i = 0; i <= 5; i++) {
+      txt += ` Step : ${i} <br><br>`;
+    }
+    document.write(`1 .  ${txt} <br><br>`);
+
+    // 2 you can omit expression 1 (like when your values are set before the loop starts):
+    let fruits = ["mango", "apple", "banana", "orange"];
+    let i = 1;
+    let OutPut = "";
+    for (; i < fruits.length; i++) {
+      OutPut += `${fruits[i]}<br>`;
+    }
+    document.write(`2 .  ${OutPut} <br><br>`);
+
+    //  3 loop scope using let it wont print
+    for (let x = 0; x < 5; x++) {
+      //
+    }
+    // document.write(`3 . ${x}<br>`);
+
+    // loop scope using var it print
+
+    for (var y = 0; y < 6; y++) {}
+    document.write(`3 . ${y}<br><br>`);
+
+    // even number using for loop
+
+    let arrEven = [2, 1, 3, 6, 4, 5, 8, 6, 3];
+
+    for (let i = 0; i < arrEven.length; i++) {
+      if (arrEven[i] % 2 == 0) {
+        document.write(arrEven[i] + "<br>");
+      }
+    }
+    document.write("<br>");
+
+    // odd number using for loop
+
+    let arrOdd = [6, 9, 2, 6, 8, 5, 2, 3];
+
+    for (let i = 0; i < arrOdd.length; i++) {
+      if (arrOdd[i] % 2 !== 0) {
+        document.write(arrOdd[i] + "<br>");
+      }
+    }
+    document.write("<br><br>");
+
+    // 4. Write a JS code to delete all occurrence of element in given array
+
+    let arrDel = [5, 3, 6, 1, 3, 8, 9, 3, 2, 4];
+    let dl = 3 + 2;
+
+    let delElem = (ar) => {
+      for (i = 0; i < ar.length; i++) {
+        if (ar[i] == dl) {
+          ar.splice(i, 1);
+        }
+        document.write(ar[i] + "<br>");
+      }
+    };
+    delElem(arrDel);
+    document.write("<br><br>");
+
+    // 5. Write a JS code to demonstrate Async loop
+
+    // for (let i = 0; i < 6; i++) {
+    //   setTimeout(() => {
+    //     console.log(i);
+    //   }, 3000);
+    // }
+    // document.write("<br><br>");
+
+    // 6. Write a JS code to find the power of a number using for loop
+
+    let findPowerNum = (num, po) => {
+      let result = 1;
+      for (let i = 0; i < po; i++) {
+        result = result * num;
+      }
+      return result;
+    };
+    console.log(findPowerNum(5, 2));
+    console.log(findPowerNum(3, 3));
+
+    // 7 . Write a JS code to print a pattern using for loop
+
+    for (let i = 1; i < 9; i++) {
+      for (let j = 1; j <= i; j++) {
+        document.write(`&nbsp ${j}`);
+      }
+      document.write(`<br>`);
+    }
+    document.write("<br><br>");
+
+    // another one
+
+    for (i = 1; i < 9; i++) {
+      for (j = i; j < 9; j++) {
+        document.write(`&nbsp ${j}`);
+      }
+      document.write(`<br>`);
+    }
+
+    // 9. Write a JS code to calculate the sum of digits in a number
+
+    let re = 0;
+    for (let i = 1; i <= 5; i++) {
+      re += +i;
+    }
+    console.log(re);
+
+    document.write(`<br>`);
+
+    // 10 star paettern (1)
+
+    let starPattern = () => {
+      // debugger;
+      for (let i = 1; i <= 8; i++) {
+        for (let j = 1; j <= 8; j++) {
+          document.write("&nbsp*");
+        }
+        document.write("&nbsp*");
+        document.write(`<br>`);
+      }
+    };
+    starPattern();
+    document.write(`<br>`);
+
+    // 11 piramid pattern
+
+    for (i = 1; i <= 5; i++) {
+      for (let k = i; k <= 5; k++) {
+        document.write("&nbsp&nbsp");
+      }
+      for (j = 1; j <= i; j++) {
+        document.write("* &nbsp");
+      }
+      document.write("<br>");
+    }
+
+    for (let i = 1; i <= 6; i++) {
+      for (let j = 1; j <= 6; j++) {
+        document.write("&nbsp*");
+      }
+      document.write("&nbsp*");
+      document.write(`<br>`);
+    }
+
+    document.write(`<br><br>`);
+    // 12 (*) and ($) pattern  (1)
+
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= 5; j++) {
+        if (i && j === 3) {
+          document.write("&nbsp$");
+        } else if (i == 3 && j) {
+          document.write("&nbsp$");
+        } else {
+          document.write("&nbsp*");
+        }
+      }
+      document.write("<br>");
+    }
+
+    document.write(`<br><br>`);
+
+    // 13 (*) and ($) pattern  (2)
+
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= 5; j++) {
+        if (i + j === 6) {
+          document.write("&nbsp$");
+        } else if (i === j) {
+          document.write("&nbsp$");
+        } else {
+          document.write("&nbsp*");
+        }
+      }
+      document.write("<br>");
+    }
+
+    document.write(`<br><br>`);
+
+    // 14 (*) and ($) pattern  (3)
+
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= 5; j++) {
+        if (i === 1 || i === 5 || j === 1 || j === 5) {
+          document.write("&nbsp&");
+        } else {
+          document.write("&nbsp *");
+        }
+      }
+      document.write("<br>");
+    }
+
+    // ===============================================================================================================================
+
+    // for in loop
+    // The JavaScript for in statement loops through the properties of an Object:
+
+    let vehicles = { car: "volvo", bike: "yamaha" };
+
+    let num = [8, 5, 9, 6, 5, 4];
+    for (const n in num) {
+      console.log(num[n]);
+    }
+
+    for (let key in vehicles) {
+      console.log("=> " + key);
+    }
+
+    // for o f loop
+    //  The JavaScript for of statement loops through the values of an iterable object.
+
+    let arr = [10, 21, 2, 13, 15, 62, 33, 1];
+
+    for (const y of arr) {
+      console.log(y);
+    }
+
+    let person = { name: "vamshi", age: 23 };
+    for (const z of Object.values(person)) {
+      console.log(z);
+    }
+
+    let numArr = [1, 0, 2, 0, 2, 3, 12, 3, 14];
+
+    numArr.forEach((elem) => {
+      console.log("= >  " + elem);
+    });
+  </script>
+</html>
